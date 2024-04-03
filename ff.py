@@ -1,27 +1,41 @@
-print("RG")
-rg = input("Digite o seu RG:\n")
-tamanho = len(rg) < 11  # Verifica se a senha tem menos de 11 caracteres
+senha = input("Crie uma senha:\n ")
+tamanho = len(senha) < 8  
 minuscula = (
-rg.islower()
-                                            )  # Verifica se a senha é composta apenas por letras minúsculas
+                            senha.islower()
+                        )  
 maiuscula = (
-                                    rg.isupper()
-                                            )  # Verifica se a senha é composta apenas por letras maiúsculas
+                            senha.isupper()
+                        )  
 soh_letras = (
-                                    rg.isalpha()
-                                            )  # Verifica se a senha é composta apenas por letras
+                            senha.isalpha()
+                        )  
 soh_letras_e_num = (
-                                    rg.isalnum()
-                                            )  # Verifica se a senha é composta apenas por letras e números
-                                            # Verifica se a senha é válida e imprime o resultado
+                            senha.isalnum()
+                        )  
 eh_valida = (
-                                    tamanho
-                                    or minuscula  # minúscula
-                                    or maiuscula  # maiúscula
-                                    or soh_letras  # alfabético
-                                    or soh_letras_e_num  # alfa numérico
-                                            )
+                            tamanho
+                            or minuscula  
+                            or maiuscula  
+                            or soh_letras  
+                            or soh_letras_e_num  
+                        )
 if eh_valida:
-                                    print("RG inválido")
-elif not eh_valida:
-                                    print("RG válido")
+        print("Senha inválida")
+else:
+        print("Senha válida")
+
+n = int(input("Digite um número inteiro e maior que zero:\n "))
+eh_primo = True
+for i in range(2, n // 2):
+        if n % i == 0:
+                eh_primo = False  
+print(f"{n} {'' if eh_primo else 'não '}é primo")
+
+
+print("Proteger a sua senha")
+senha_ord = n
+for c in senha:
+        senha_ord += str(ord(c))
+        int(senha_ord) % eh_primo
+        
+        # Pedro@sugoy1

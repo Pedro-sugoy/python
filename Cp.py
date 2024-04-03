@@ -2,13 +2,12 @@ esp = "\n\n"
 linha = "=" * 50
 
 while True:
+    print(esp,linha)
     print("Cp1 de Python")
     print("\t1 Fazer um login e senha")
     print("\t2 Entrar como usuário")
     print("\t3 Encerrar")
-    # print("\t4 Protegendo a senha")
-    # print("\t5 Login com a senha protegida")
-    # print("\t6 Encerrar")
+
 
     opcao = input("Digite uma das opções\n")
     
@@ -66,7 +65,7 @@ while True:
                     case "2":
                         print(esp,linha)
                         print("USER-NAME")
-                        login = input("Digite um nome de usuario:\n").isalpha()
+                        login = input("Digite um nome de usuario:\n")
                         if "_" or "1" or "2" or "3" or "5" or "6" or "7" or "8" or "9" or "0" in login:
                             print("valido")
                         else:
@@ -141,140 +140,140 @@ while True:
                             print("Senha válida")
                             break
                         print(esp,linha)
+
         case "2":
             print(esp,linha)
             print("ENTRAR COMO USUARIO")
             nome = input("Digite o seu nome:\n")
-            print("Escolha uma das opções para entrar:")
+            # print("Escolha uma das opções para entrar:")
             while True:
                 print(esp,linha)
-                print("Escolha um dos 3 métodos de de login")
-                print("\a1 Emai")
-                print("\a2 User-name")
-                print("\a3 RG ou CPF")
+                print("Valide o usuario e a senha")
                 
-                esc_usuario = input("Digite uma das opções:\n")
+                # esc_usuario = input("Digite uma das opções:\n")
 
-                match esc_usuario:
-                    case "1":
-                        print(esp,linha)
-                        print("EMAIL")
-                        login = input("Digite um Email:\n")
-                        if "@" and ".com" or ".br" in login:
-                            print("Email valida")
-                        else:
-                            print("Email invalido")
+                # match esc_usuario:
+                #     case "1":
+                #         print(esp,linha)
+                #         print("EMAIL")
+                #         login = input("Digite um Email:\n")
+                #         if "@" and ".com" or ".br" in login:
+                #             print("Email valida")
+                #         else:
+                #             print("Email invalido")
                         
-                        print(esp,linha)
+                #         print(esp,linha)
 
-                        senha = input("Crie uma senha:\n ")
-                        tamanho = len(senha) < 8  
-                        minuscula = (
-                            senha.islower()
-                        )  
-                        maiuscula = (
-                            senha.isupper()
-                        )  
-                        soh_letras = (
-                            senha.isalpha()
-                        )  
-                        soh_letras_e_num = (
-                            senha.isalnum()
-                        )  
-                        eh_valida = (
-                            tamanho
-                            or minuscula  
-                            or maiuscula  
-                            or soh_letras  
-                            or soh_letras_e_num  
-                        )
-                        if eh_valida:
-                            print("Senha inválida")
-                        else:
-                            print("Senha válida")
-                        print(esp,linha)
+                #         senha = input("Crie uma senha:\n ")
+                #         tamanho = len(senha) < 8  
+                #         minuscula = (
+                #             senha.islower()
+                #         )  
+                #         maiuscula = (
+                #             senha.isupper()
+                #         )  
+                #         soh_letras = (
+                #             senha.isalpha()
+                #         )  
+                #         soh_letras_e_num = (
+                #             senha.isalnum()
+                #         )  
+                #         eh_valida = (
+                #             tamanho
+                #             or minuscula  
+                #             or maiuscula  
+                #             or soh_letras  
+                #             or soh_letras_e_num  
+                #         )
+                #         if eh_valida:
+                #             print("Senha inválida")
+                #         else:
+                #             print("Senha válida")
+                #             break
+                #         print(esp,linha)
 
-                    case "2":
-                        print(esp,linha)
-                        print("USER-NAME")
-                        login = input("Digite um nome de usuario:\n").isalpha()
-                        if "_" or "1" or "2" or "3" or "5" or "6" or "7" or "8" or "9" or "0" in login:
-                            print("valido")
-                        else:
-                            print("invalido")
+                #     case "2":
+                #         print(esp,linha)
+                #         print("USER-NAME")
+                #         login = input("Digite um nome de usuario:\n")
+                #         if "_" or "1" or "2" or "3" or "5" or "6" or "7" or "8" or "9" or "0" in login:
+                #             print("valido")
+                #         else:
+                #             print("invalido")
 
-                        print(esp,linha)
+                #         print(esp,linha)
 
-                        senha = input("Crie uma senha:\n ")
-                        tamanho = len(senha) < 8  
-                        minuscula = (
-                            senha.islower()
-                        )  
-                        maiuscula = (
-                            senha.isupper()
-                        )  
-                        soh_letras = (
-                            senha.isalpha()
-                        )  
-                        soh_letras_e_num = (
-                            senha.isalnum()
-                        )  
-                        eh_valida = (
-                            tamanho
-                            or minuscula  
-                            or maiuscula  
-                            or soh_letras  
-                            or soh_letras_e_num  
-                        )
-                        if eh_valida:
-                            print("Senha inválida")
-                        else:
-                            print("Senha válida")
-                        print(esp,linha)
+                #         senha = input("Crie uma senha:\n ")
+                #         tamanho = len(senha) < 8  
+                #         minuscula = (
+                #             senha.islower()
+                #         )  
+                #         maiuscula = (
+                #             senha.isupper()
+                #         )  
+                #         soh_letras = (
+                #             senha.isalpha()
+                #         )  
+                #         soh_letras_e_num = (
+                #             senha.isalnum()
+                #         )  
+                #         eh_valida = (
+                #             tamanho
+                #             or minuscula  
+                #             or maiuscula  
+                #             or soh_letras  
+                #             or soh_letras_e_num  
+                #         )
+                #         if eh_valida:
+                #             print("Senha inválida")
+                #         else:
+                #             print("Senha válida")
+                #             break
+                #         print(esp,linha)
                         
-                    case "3":
-                        print(esp,linha)
-                        print("RG/CPF")
-                        login = input("Digite o seu RG ou CPF (USE O FORMATO CPF: XXX.XXX.XXX-XX ou XXXXXXXXXXX/RG: XX.XXX.XXX-X ou XXXXXXXXX):\n")
-                        tamanho = len(login) > 9
-                        if login != tamanho:
-                            print("RG ou CPF valido")
-                        elif login == tamanho:
-                            print("RG  ou CPF invalido")
+                #     case "3":
+                #         print(esp,linha)
+                #         print("RG/CPF")
+                #         login = input("Digite o seu RG ou CPF (USE O FORMATO CPF: XXX.XXX.XXX-XX ou XXXXXXXXXXX/RG: XX.XXX.XXX-X ou XXXXXXXXX):\n")
+                #         tamanho = len(login) > 9
+                #         if login != tamanho:
+                #             print("RG ou CPF valido")
+                #         elif login == tamanho:
+                #             print("RG  ou CPF invalido")
 
-                        print(esp,linha)
+                #         print(esp,linha)
 
-                        senha = input("Crie uma senha:\n ")
-                        tamanho = len(senha) < 8  
-                        minuscula = (
-                            senha.islower()
-                        )  
-                        maiuscula = (
-                            senha.isupper()
-                        )  
-                        soh_letras = (
-                            senha.isalpha()
-                        )  
-                        soh_letras_e_num = (
-                            senha.isalnum()
-                        )  
-                        eh_valida = (
-                            tamanho
-                            or minuscula  
-                            or maiuscula  
-                            or soh_letras  
-                            or soh_letras_e_num  
-                        )
-                        if eh_valida:
-                            print("Senha inválida")
-                        else:
-                            print("Senha válida")
-                        print(esp,linha)
-                
-                print("Validando o login e usuario")
+                #         senha = input("Crie uma senha:\n ")
+                #         tamanho = len(senha) < 8  
+                #         minuscula = (
+                #             senha.islower()
+                #         )  
+                #         maiuscula = (
+                #             senha.isupper()
+                #         )  
+                #         soh_letras = (
+                #             senha.isalpha()
+                #         )  
+                #         soh_letras_e_num = (
+                #             senha.isalnum()
+                #         )  
+                #         eh_valida = (
+                #             tamanho
+                #             or minuscula  
+                #             or maiuscula  
+                #             or soh_letras  
+                #             or soh_letras_e_num  
+                #         )
+                #         if eh_valida:
+                #             print("Senha inválida")
+                #         else:
+                #             print("Senha válida")
+                #             break
+                #         print(esp,linha)
                 validando_login = input("Digite o seu login:\n")
                 if validando_login != login:
                     print("login incorreto!")
+                    break
                 else:
                     print("login correto")
 
@@ -283,6 +282,7 @@ while True:
                 validando_senha = input("Digite a sua senha:\n")
                 if validando_senha != senha:
                     print("senha incorreta!")
+                    break
                 else:
                     print("senha correta")
                 
@@ -306,8 +306,15 @@ while True:
                                     eh_primo = False  
                                     break
                             print(f"{n} {'' if eh_primo else 'não '}é primo")
+                            print(esp,linha)
 
-
+                        case "2":
+                            print(esp,linha)
+                            print("Proteger a sua senha")
+                            senha_ord = n
+                            for c in senha:
+                                senha_ord += str(ord(c))
+                               
         
 
                          
