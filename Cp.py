@@ -7,9 +7,9 @@ while True:
     print(esp,linha)
     print(f"Cp1 de Python\n{time}")
     print("bom dia!")
-    print("\t1 -Fazer um login e senha")
-    print("\t2 -Entrar como usuário")
-    print("\t3 -Encerrar")
+    print("\t1 =Fazer um login e senha")
+    print("\t2 =Entrar como usuário")
+    print("\t3 =Encerrar")
 
 
     opcao = input("Digite uma das opções:\n")
@@ -39,7 +39,7 @@ while True:
                         
                         print(esp,linha)
 
-                        senha = input("Crie uma senha:\n ") # Questão 5 
+                        senha = input("Crie uma senha(Deve conter pelo menos 12 digitos,uma letra maiuscula,um caractere especial e um número entre 0 a 9):\n ") # Questão 5 
                         tamanho = len(senha) < 8  
                         minuscula = (
                                 senha.islower()
@@ -90,7 +90,7 @@ while True:
 
                         print(esp,linha)
 
-                        senha = input("Crie uma senha:\n ")
+                        senha = input("Crie uma senha(Deve conter pelo menos 12 digitos,uma letra maiuscula,um caractere especial e um número entre 0 a 9):\n ")
                         tamanho = len(senha) < 12
                         minuscula = (
                                 senha.islower()
@@ -155,7 +155,7 @@ while True:
 
                         print(esp,linha)
 
-                        senha = input("Crie uma senha:\n ")
+                        senha = input("Crie uma senha(Deve conter pelo menos 12 digitos,uma letra maiuscula,um caractere especial e um número entre 0 a 9):\n ")
                         tamanho = len(senha) < 8  
                         minuscula = (
                                 senha.islower()
@@ -187,12 +187,24 @@ while True:
                         for c in senha:
                             senha_ord += str(ord(c))
                         senha_hash = int(senha_ord) % n
-                        senha = senha_hash #Questão 1 final
+                        senha = senha_hash 
+                    
+                    case "4":
+                        pc2 = input("Deseja voltar?")
+                        match pc2:
+                            case "s"|"sim"|"SIM"|"sIM"|"Sim"|"S":
+                                break
+                            case _:
+                                print("Continuando...")
+                                print(linha, esp)
+                                continue#Questão 1 final
 
         case "2"|"2 -Entrar como usuário"|"Entrar como usuário":#Questão 2 início
             print(esp,linha)
             print("ENTRAR COMO USUARIO")
             nome = input("Digite o seu nome:\n")
+            nome = nome.capitalize()
+
             while True:
                 print(esp,linha)
                 print("Válide o usuario e a senha")
@@ -218,7 +230,7 @@ while True:
                         
                 #         print(esp,linha)
 
-                #         senha = input("Crie uma senha:\n ") # Questão 5 
+                #         senha = input("Crie uma senha(Deve conter pelo menos 12 digitos,uma letra maiuscula,um caractere especial e um número entre 0 a 9):\n ") # Questão 5 
                 #         tamanho = len(senha) < 8  
                 #         minuscula = (
                 #                 senha.islower()
@@ -269,7 +281,7 @@ while True:
 
                 #         print(esp,linha)
 
-                #         senha = input("Crie uma senha:\n ")
+                #         senha = input("Crie uma senha(Deve conter pelo menos 12 digitos,uma letra maiuscula,um caractere especial e um número entre 0 a 9):\n ")
                 #         tamanho = len(senha) < 12
                 #         minuscula = (
                 #                 senha.islower()
@@ -334,7 +346,7 @@ while True:
 
                 #         print(esp,linha)
 
-                #         senha = input("Crie uma senha:\n ")
+                #         senha = input("Crie uma senha(Deve conter pelo menos 12 digitos,uma letra maiuscula,um caractere especial e um número entre 0 a 9):\n ")
                 #         tamanho = len(senha) < 8  
                 #         minuscula = (
                 #                 senha.islower()
@@ -366,7 +378,16 @@ while True:
                 #         for c in senha:
                 #             senha_ord += str(ord(c))
                 #         senha_hash = int(senha_ord) % n
-                #         senha = senha_hash #Questão 1 final
+                #         senha = senha_hash 
+                # case "4":
+                #         pc2 = input("Deseja voltar?")
+                #         match pc2:
+                #             case "s"|"sim"|"SIM"|"sIM"|"Sim"|"S":
+                #                 break
+                #             case _:
+                #                 print("Continuando...")
+                #                 print(linha, esp)
+                #                 continue#Questão 1 final
 #######################################################################################################
                 validando_login = input("Digite o seu login:\n")
                 if validando_login != login:
@@ -383,18 +404,18 @@ while True:
                     break
                 else:
                     print("senha correta")
-                
-                print(esp,linha)#Questão 2 final
+                    print(esp,linha)#Questão 2 final
 
                 while True:
                     print(f"Bem vindo(a) {nome}!")
                     print("Digite 1:\n")
                     print("\t1 Número primo")
 
-                    escolha = input("DIgite uma das opções:\n")
+                    escolha = input("Digite uma das opções:\n")
 
                     match escolha:
                         case "1":
+                            print(esp,linha)
                             validando_login2 = input("Digite o seu login:\n")
                             if validando_login2 != login:
                                 print("login incorreto!")
@@ -411,7 +432,7 @@ while True:
                             else:
                                 print("senha correta")
                                 print(esp,linha)
-
+                                
                             print("NÚMERO PRIMO")
                             N = int(input("Digite um número, para achar o maio número primo até ele:\n"))  
                             maior_primo = 0
@@ -425,11 +446,9 @@ while True:
                                     maior_primo = num
                             print(maior_primo)
                             print(esp,linha)
-
-                        
-                                             
+                            break            
         case "3"|"3 -Encerrar"|"-Encerrar":
-            pc = input("Deseje encerrar o programa?")
+            pc = input("Deseja encerrar o programa?")
             match pc:
                 case "s"|"sim"|"SIM"|"sIM"|"Sim"|"S":
                     break
