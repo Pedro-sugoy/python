@@ -66,7 +66,7 @@ while True:
                                 print("Senha válida")   
                                 break
                           
-                        n = 479 #Questão 4 
+                        n = maior_primo #Questão 4 
                         senha_ord = ""
                         for c in senha:
                             senha_ord += str(ord(c))
@@ -117,7 +117,7 @@ while True:
                                 print("Senha válida")
                                 break
                              
-                        n = 479
+                        n = maior_primo
                         senha_ord = ""
                         for c in senha:
                             senha_ord += str(ord(c))
@@ -182,7 +182,7 @@ while True:
                                 print("Senha válida")   
                                 break
                           
-                        n = 479
+                        n = maior_primo
                         senha_ord = ""
                         for c in senha:
                             senha_ord += str(ord(c))
